@@ -1,0 +1,4 @@
+<!--View/Inshop/inshop.wxml-->
+<import src = "../../My/mytemplate/mytemplte.wxml"/>
+<template is = "markettext" data="{{titleon,texton}}">
+</template>

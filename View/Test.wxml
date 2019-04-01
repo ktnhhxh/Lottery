@@ -1,0 +1,76 @@
+<!--View/Test.wxml-->
+<import src = "../My/mytemplate/mytemplte.wxml"/>
+
+<!-- 房间名称 -->
+<view class="inputview">
+<text class ="inputtitle">房间:</text>
+<input  loading="true" placeholder="名字" bindinput="roomNameInput" maxlength="10" />
+</view>
+
+<!-- 加入图片 -->
+<i-button bindtap='chooseImg' type="warning">
+加入图片
+ </i-button>
+
+  <view wx:for="{{imgs}}" wx:for-key="item" wx:for-index="id">
+  <image src ="{{item}}" bindtap = "previewImg"></image>
+  </view>
+ 
+
+
+<!-- 日期选择 -->
+ <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <input value='{{time}}' placeholder='选择时间'/>
+  </picker>
+
+
+ <!-- 奖项数组添加 -->   
+<view wx:for="{{lists}}" wx:for-item="item" wx:for-index="idx">
+<view class="inputview">
+<text class ="inputtitle">奖项:</text>
+  <input  autofocus placeholder="名字" bindinput="NameInput" data-info="{{idx}}"/>
+</view>
+
+ <view class="inputview">
+  <text class ="inputtitle">级别:</text>
+  <input    autofocus placeholder="几等奖" bindinput="levelInput" data-info="{{idx}}"/>
+</view>
+
+<view class="inputview">
+    <text class ="inputtitle">个数:</text>
+    <input  type="number"  autofocus placeholder="数字" bindinput="numberInput" data-info="{{idx}}"/>
+</view>
+
+<view class="inputview">
+  <text class ="inputtitle">图片:</text>
+  <input    autofocus placeholder="选择图片" bindinput="levelInput" data-info="{{idx}}"/>
+</view>
+
+</view> 
+
+<!-- 添加删除数组 -->
+<view class="button">
+    <button    bindtap='awardadd'>添加奖项</button>
+    <button    bindtap='delList'>删除奖项</button>
+</view>
+
+<!-- 奖项描述 -->
+<view class="inputview">
+<text class ="inputtitle">奖项描述:</text>
+    <input   placeholder="请输入详细描述(最多50字)" maxlength="50" bindinput="describeInput" />
+</view>
+
+<i-button bind:click="loginBtnClick"  type="warning">提交</i-button>
+<i-button bind:click="requestimg"  type="warning">提交图片</i-button>
+<i-button bind:click="requestphp"  type="warning">请求</i-button>
+
+
+
+<!-- 开关 -->
+<text>允许无条件参加：   </text>
+<i-cell title="自定义内容">
+  <i-switch value="{{switch1}}" size="large" bind:change="onChange" slot="footer">
+      <view slot="open">开启</view>
+      <view slot="close">关闭</view>
+ </i-switch>
+</i-cell>

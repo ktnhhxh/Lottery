@@ -1,0 +1,14 @@
+
+<template name = "markettext">
+<view class = "viewtitle">
+  <view class = "title">
+  {{titleon}}
+  </view>
+</view>
+
+<view class = "viewtext">
+  <view class = "text">
+  {{texton}}
+  </view>
+</view>
+</template>

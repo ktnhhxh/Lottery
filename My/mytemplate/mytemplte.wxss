@@ -1,0 +1,16 @@
+.title{
+  font-weight: bold;
+  width: 400rpx;
+  margin: 15px 0 0 15px;
+}
+.text{
+  font-weight: normal;
+  font-size: 100%;
+  margin: 15px 0 15px 15px;
+}
+.viewtile{
+
+}
+.viewtext{
+
+}

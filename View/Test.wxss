@@ -1,0 +1,35 @@
+/* View/Test.wxss */
+@import "../My/mytemplate/mytemplte.wxss";
+
+.image{
+  width: 1000px;
+}
+
+
+
+.button{
+   display: flex;
+   flex-direction: row;
+}
+
+.inputview{
+  flex-direction: row;
+  display: flex;
+  margin: 5px 15px 0  10px;
+}
+.inputtitle{
+   font-weight: normal;
+  font-size: 100%;
+  margin: 0px 15px 0  10px;
+}
+
+.flex-item  button {
+  height: 32px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 10px 0 0 0;
+  min-width: 50px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
